@@ -8,6 +8,7 @@
 - [ ] Built-in, Third-party and Custom Modules
 - [ ] Dependencies and DevDependencies
 - [ ] FileSystem in NodeJS
+- [ ] Http Module in NodeJS
 
 ### What is NodeJS?
 
@@ -20,3 +21,13 @@
 - npm is the package manager for the Node JavaScript platform. It puts modules in place so that node can find them, and manages dependency conflicts intelligently.
 - npm is extremely fast, and helps to manage the packages that you download.
 - npm is the default package manager for the JavaScript runtime environment Node.js.
+
+### Package.json
+
+- package.json is the manifest file for Node.js projects and it holds metadata relevant to the project.
+- It holds various metadata relevant to the project like the name, version, description, homepage, etc.
+- It also holds the list of dependencies.
+- Version:
+  - Major version: 1.0.0: Breaking changes
+  - Minor version: 0.1.0: New features
+  - Patch version: 0.0.1: Bug fixes
