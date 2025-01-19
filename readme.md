@@ -3,10 +3,10 @@
 ## Topics
 
 - [x] What is NodeJS?
-- [ ] Understanding nodemodules
+- [x] Understanding nodemodules
 - [x] package.json and package-lock.json
 - [x] Built-in, Third-party and Custom Modules
-- [ ] Dependencies and DevDependencies
+- [x] Dependencies and DevDependencies
 - [ ] FileSystem in NodeJS
 - [x] Http Module in NodeJS
 - [x] Type of Imports
@@ -103,3 +103,27 @@
 - The `node_modules` directory is created when you run `npm install`.
 - It holds all the dependencies that are installed for the project.
 - It is recommended not to commit the `node_modules` directory to the version control system.
+
+### Dependencies and DevDependencies
+
+- Dependencies: Modules that are required for the application to run in the production environment.
+- DevDependencies: Modules that are required for the development of the application but not required for the application to run in the production environment.
+
+Commands:
+
+```bash
+# Install a package
+npm install <package-name>
+
+# Uninstall a package
+npm uninstall <package-name>
+
+# Install a package as a dev dependency
+npm install <package-name> --save-dev or npm install <package-name> -D
+
+# Uninstall a package from dev dependencies
+npm uninstall <package-name> --save-dev or npm uninstall <package-name> -D
+
+# Install all the dependencies
+npm install or npm i
+```
