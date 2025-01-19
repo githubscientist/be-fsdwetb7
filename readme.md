@@ -5,11 +5,11 @@
 - [x] What is NodeJS?
 - [ ] Understanding nodemodules
 - [x] package.json and package-lock.json
-- [ ] Built-in, Third-party and Custom Modules
+- [x] Built-in, Third-party and Custom Modules
 - [ ] Dependencies and DevDependencies
 - [ ] FileSystem in NodeJS
 - [x] Http Module in NodeJS
-- [ ] Type of Imports
+- [x] Type of Imports
 
 ### What is NodeJS?
 
@@ -56,3 +56,50 @@
 ```
 
 - extension: `.mjs`
+
+### Built-in Modules, Third-party Modules and Custom Modules
+
+- Built-in Modules: Modules that are available in Node.js by default.
+
+  - http: To create a http server
+  - fs: To work with file system
+  - path: To work with file paths
+  - os: To get information about the operating system
+
+- Third-party Modules: Modules that are not available in Node.js by default.
+
+  - express: Web framework for Node.js
+  - mongoose: MongoDB object modeling tool
+  - nodemailer: Send e-mails from Node.js
+  - nodemon: Monitor for any changes in your source and automatically restart your server
+  - dotenv: Loads environment variables from a .env file into process.env
+  - axios: Promise based HTTP client for the browser and node.js
+  - morgan: HTTP request logger middleware for node.js
+  - cors: Middleware for enabling Cross-Origin Resource Sharing
+  - body-parser: Node.js body parsing middleware or express.json() and express.urlencoded()
+  - cookie-parser: Parse Cookie header and populate req.cookies with an object keyed by the cookie names
+  - bcrypt: Library to help you hash passwords
+  - jsonwebtoken: An implementation of JSON Web Tokens (authentication)
+  - multer: Middleware for handling `multipart/form-data`
+
+- Custom Modules: Modules that are created by the developer.
+  - ErrorRoute
+  - Authentication
+  - Authorization
+  - Logger
+  - Validation
+  - SendMail
+
+### package.json and package-lock.json
+
+- package.json: Holds metadata relevant to the project and a list of dependencies.
+- package-lock.json:
+  - Holds the exact version of the dependencies that are installed.
+  - It helps to lock the version of the dependencies so that the same version is installed in all the environments.
+  - It is created automatically when you run `npm install`.
+
+### nodemodules
+
+- The `node_modules` directory is created when you run `npm install`.
+- It holds all the dependencies that are installed for the project.
+- It is recommended not to commit the `node_modules` directory to the version control system.
