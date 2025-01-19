@@ -4,11 +4,12 @@
 
 - [x] What is NodeJS?
 - [ ] Understanding nodemodules
-- [ ] package.json and package-lock.json
+- [x] package.json and package-lock.json
 - [ ] Built-in, Third-party and Custom Modules
 - [ ] Dependencies and DevDependencies
 - [ ] FileSystem in NodeJS
-- [ ] Http Module in NodeJS
+- [x] Http Module in NodeJS
+- [ ] Type of Imports
 
 ### What is NodeJS?
 
@@ -31,3 +32,27 @@
   - Major version: 1.0.0: Breaking changes
   - Minor version: 0.1.0: New features
   - Patch version: 0.0.1: Bug fixes
+
+### Type of Imports
+
+- CommonJS: `require()`, `module.exports`
+  - package.json
+
+```json
+{
+  "type": "commonjs"
+}
+```
+
+- extension: `.js`
+
+- ES6: `import`, `export`
+  - package.json
+
+```json
+{
+  "type": "module"
+}
+```
+
+- extension: `.mjs`
