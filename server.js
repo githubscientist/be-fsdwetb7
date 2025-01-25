@@ -1,28 +1,15 @@
-const http = require('http');
+// import express
+const express = require('express');
 
-const server = http.createServer((req, res) => {
-    console.log(`Request made to: ${req.url}`);
-    console.log(`Request method: ${req.method}`);
+// create an express app
+const app = express();
 
-    if (req.url === '/') {
-        if (req.method === 'GET') {
-            res.end('GET: Root Route!');
-        } else if (req.method === 'POST') {
-            res.end('POST: Root Route!');
-        } else if (req.method === 'PUT') {
-            res.end('PUT: Root Route!');
-        } else if (req.method === 'DELETE') {
-            res.end('DELETE: Root Route!');
-        } else {
-            res.end('Method not allowed!');
-        }
-    } else if (req.url === '/users') {
-        res.end('Users Route!');
-    } else {
-        res.end('Route not found!');
-    }
+// request handlers
+app.get('/', (req, res) => {
+    res.json({ message: 'Hello World!' });
 });
 
-server.listen(3001, 'localhost', () => {
+// listen for requests
+app.listen(3001, 'localhost', () => {
     console.log('Server is running on http://localhost:3001');
 });
