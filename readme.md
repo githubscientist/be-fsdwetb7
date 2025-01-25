@@ -127,3 +127,19 @@ npm uninstall <package-name> --save-dev or npm uninstall <package-name> -D
 # Install all the dependencies
 npm install or npm i
 ```
+
+### Modules
+
+- A module is a file that contains code that can be reused.
+- A module has collections of functions, variables, and classes.
+
+### http methods
+
+- GET: To request data from the server.
+- POST: To submit data to the server.
+- PUT: To update data on the server.
+- DELETE: To delete data from the server.
+
+Restful API:
+
+- It is an architectural style that uses HTTP requests to perform CRUD operations.

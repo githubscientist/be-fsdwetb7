@@ -1,19 +1,28 @@
-// server.js
-const { createServer } = require('http');
-const morgan = require('morgan');
+const http = require('http');
 
-// logs all requests to the console
-const logger = morgan('combined');
+const server = http.createServer((req, res) => {
+    console.log(`Request made to: ${req.url}`);
+    console.log(`Request method: ${req.method}`);
 
-// creates a simple http server
-const server = createServer((req, res) => {
-    // logs all requests to the console
-    logger(req, res, () => { });
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World!\n');
+    if (req.url === '/') {
+        if (req.method === 'GET') {
+            res.end('GET: Root Route!');
+        } else if (req.method === 'POST') {
+            res.end('POST: Root Route!');
+        } else if (req.method === 'PUT') {
+            res.end('PUT: Root Route!');
+        } else if (req.method === 'DELETE') {
+            res.end('DELETE: Root Route!');
+        } else {
+            res.end('Method not allowed!');
+        }
+    } else if (req.url === '/users') {
+        res.end('Users Route!');
+    } else {
+        res.end('Route not found!');
+    }
 });
 
-// starts a simple http server locally on port 3000
-server.listen(3000, '127.0.0.1', () => {
-    console.log('Listening on 127.0.0.1:3000');
+server.listen(3001, 'localhost', () => {
+    console.log('Server is running on http://localhost:3001');
 });
