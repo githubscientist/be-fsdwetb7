@@ -4,11 +4,17 @@ const express = require('express');
 // create an express app
 const app = express();
 
+// import morgan
+const morgan = require('morgan');
+
 // import the logger middleware
-const logger = require('./middlewares/logger');
+// const logger = require('./middlewares/logger');
 
 // use the logger middleware
-app.use(logger);
+// app.use(logger);
+
+// use morgan middleware
+app.use(morgan('dev'));
 
 // request handlers
 app.get('/', (req, res) => {
