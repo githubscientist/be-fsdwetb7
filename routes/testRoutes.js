@@ -1,23 +1,13 @@
 const express = require('express');
+const testController = require('../controllers/testController');
 
 const testRouter = express.Router();
 
 // request handlers
-testRouter.get('/', (req, res) => {
-    res.json({ message: 'Hello GET!' });
-});
-
-testRouter.post('/', (req, res) => {
-    res.json({ message: 'Hello POST!' });
-});
-
-testRouter.put('/', (req, res) => {
-    res.json({ message: 'Hello PUT!' });
-});
-
-testRouter.delete('/', (req, res) => {
-    res.json({ message: 'Hello DELETE!' });
-});
+testRouter.get('/', testController.testGet);
+testRouter.post('/', testController.testPost);
+testRouter.put('/', testController.testPut);
+testRouter.delete('/', testController.testDelete);
 
 // export the router
 module.exports = testRouter;
