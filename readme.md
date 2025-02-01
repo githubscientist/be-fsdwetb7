@@ -1,26 +1,36 @@
-# day36 - NodeJS Fundamentals
+# Social Media Application - Socify
 
-## Topics
+## Description
 
-- [ ] FileSystem in NodeJS
+Socify is a social media application that allows users to share their thoughts, photos, and videos with their friends and family. Users can create an account, add friends, and post updates to their profile. They can also like and comment on their friends' posts, and send private messages to each other. Socify is a great way to stay connected with the people you care about, no matter where they are in the world.
 
-# day37 - ExpressJS and Middlewares
+## Features
 
-## Topics
+- User authentication: Users can create an account, log in, and log out.
+- Profile creation: Users can create a profile with their name, profile picture, and bio.
+- Friend requests: Users can send and accept friend requests.
+- Posts: Users can create posts with text, photos, and videos.
+- Likes and comments: Users can like and comment on their friends' posts.
+- Direct messages: Users can send private messages to each other.
+- Notifications: Users receive notifications when they have new friend requests, messages, or likes on their posts.
 
-- [x] What is ExpressJS?
-- [x] launch app.listen()
-- [x] What is middleware?
-- [x] Understanding in-built middlewares
-- [x] Custom middlewares
+## Collections
 
-### What is ExpressJS?
+- Users
+- Profiles
+- Posts
+- Comments
+- Likes
+- Friend Requests
+- Messages
+- Notifications
 
-- Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
-- It is an open-source framework developed and maintained by the Node.js foundation.
-- It is designed for building web applications and APIs.
-- The main reason for using Express is to help you organize your application in a more structured manner.
+## Routes
 
-### What is middleware?
+Posts:
 
-- Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle.
+- GET /posts: Get all posts
+- GET /posts/:id: Get a post by ID
+- POST /posts: Create a new post
+- PUT /posts/:id: Update a post by ID
+- DELETE /posts/:id: Delete a post by ID
