@@ -1,0 +1,28 @@
+{
+  "name": "be-fsdwetb7",
+  "version": "1.0.0",
+  "description": "Social Media Application - Socify",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/githubscientist/be-fsdwetb7.git"
+  },
+  "author": "Sathish Gnanaprakasam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/githubscientist/be-fsdwetb7/issues"
+  },
+  "homepage": "https://github.com/githubscientist/be-fsdwetb7#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mongoose": "^8.9.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
