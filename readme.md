@@ -38,3 +38,25 @@ Posts:
 ### What is mongoose?
 
 Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in code and the representation of those objects in MongoDB.
+
+### Post Schema
+
+```
+Post:
+    - Title: String
+    - Content: String
+    - Author: User
+    - Comments: [Comment]
+    - Likes: [User]
+    - CreatedAt: Date
+    - UpdatedAt: Date
+```
+
+Example:
+
+```
+{
+    title: "Hello, World!",
+    content: "This is my first post on Socify.",
+}
+```
