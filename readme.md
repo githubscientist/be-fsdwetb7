@@ -60,3 +60,10 @@ Example:
     content: "This is my first post on Socify.",
 }
 ```
+
+```
+{
+    title: "The Best Day Ever!",
+    content: "I had so much fun today with my friends.",    
+}
+```
