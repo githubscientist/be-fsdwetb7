@@ -21,6 +21,38 @@ const postController = {
             res.status(500).json({ message: error.message });
         }
     },
+    getPosts: async (req, res) => {
+        try {
+            // get all the posts from the database
+            const posts = await Post.find().select('-__v');
+
+            // send a response
+            res.status(200).json({ posts });
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    },
+    getPost: async (req, res) => {
+        try {
+
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    },
+    updatePost: async (req, res) => {
+        try {
+
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    },
+    deletePost: async (req, res) => {
+        try {
+
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    }
 }
 
 module.exports = postController;
