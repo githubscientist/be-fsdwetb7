@@ -67,3 +67,17 @@ Example:
     content: "I had so much fun today with my friends.",    
 }
 ```
+
+```
+{
+    title: "My New Puppy",
+    content: "Meet my new puppy, Max!",
+}
+````
+
+````
+{
+    "title": "My Favorite Recipe",
+    "content": "Here's the recipe for my favorite dish."
+}
+```

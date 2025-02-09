@@ -9,7 +9,8 @@ const postController = {
             // create a new post
             const newPost = new Post({
                 title,
-                content
+                content,
+                author: req.userId
             });
 
             // save the post
