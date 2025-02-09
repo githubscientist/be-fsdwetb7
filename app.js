@@ -2,6 +2,7 @@ const express = require('express');
 const postsRouter = require('./routes/postRoutes');
 const authRouter = require('./routes/authRoutes');
 const cookieParser = require('cookie-parser');
+const adminRouter = require('./routes/adminRoutes');
 
 const app = express();
 
@@ -13,5 +14,6 @@ app.use(cookieParser());
 
 app.use('/posts', postsRouter);
 app.use('/auth', authRouter);
+app.use('/admin', adminRouter);
 
 module.exports = app;
