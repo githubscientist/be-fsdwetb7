@@ -56,15 +56,36 @@ const authController = {
             // generate a token
             const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
 
+            // set the token in the cookie
+            res.cookie('token', token, { httpOnly: true, sameSite: 'strict', maxAge: 24 * 60 * 60 * 1000, secure: true });
+
             // return a success message
-            res.status(200).json({ message: "User logged in successfully", token });
+            res.status(200).json({ message: "User logged in successfully" });
         } catch (error) {
             res.status(500).json({ message: error.message });
         }
     },
     logout: async (req, res) => {
         try {
+            // clear the token from the cookie
+            res.clearCookie('token');
 
+            // return a success message
+            res.status(200).json({ message: "User logged out successfully" });
+        } catch (error) {
+            res.status(500).json({ message: error.message });
+        }
+    },
+    me: async (req, res) => {
+        try {
+            // get the user ID from the request object
+            const userId = req.userId;
+
+            // get the user details
+            const user = await User.findById(userId).select('-password -__v');
+
+            // return the user details
+            res.status(200).json({ user });
         } catch (error) {
             res.status(500).json({ message: error.message });
         }
