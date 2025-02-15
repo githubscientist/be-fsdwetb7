@@ -1,6 +1,7 @@
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require('jsonwebtoken');
+const sendMail = require("../utils/sendMail");
 require('dotenv').config();
 
 const authController = {
@@ -25,6 +26,9 @@ const authController = {
 
             // save the user to the database
             await newUser.save();
+
+            // send a welcome email
+            sendMail(email, "Welcome to Socify!!", "Welcome to Socify!! We are glad to have you on board.");
 
             // return a success message
             res.status(201).json({ message: "User registered successfully" });
