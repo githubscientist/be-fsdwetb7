@@ -28,7 +28,7 @@ const authController = {
             await newUser.save();
 
             // send a welcome email
-            sendMail(email, "Welcome to Socify!!", "Welcome to Socify!! We are glad to have you on board.");
+            // sendMail(email, "Welcome to Socify!!", "Welcome to Socify!! We are glad to have you on board.");
 
             // return a success message
             res.status(201).json({ message: "User registered successfully" });
